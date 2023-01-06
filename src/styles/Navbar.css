@@ -1,0 +1,31 @@
+.Navbar {
+  width: 100%;
+  height: 10rem;
+  background-color: var(--color-black-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0 8rem;
+}
+.Navbar--more {
+  background-color: var(--color-black-secondary);
+}
+.Navbar__logo {
+  color: var(--color-grey);
+}
+.Navbar__logo span {
+  font-weight: 700;
+  color: var(--color-grey-light);
+}
+.Navbar__linksContainer {
+  color: var(--color-grey-light);
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+.Navbar__link {
+}
+.Navbar__link--active {
+  color: var(--color-grey);
+}
