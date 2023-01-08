@@ -29,6 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
   /* min-height: 100vh; */
+  position: relative;
 }
 .button-secondary {
   font-family: inherit;

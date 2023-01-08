@@ -1,0 +1,22 @@
+.ScheduleButton {
+  width: 30rem;
+  height: 7.2rem;
+  background-color: var(--color-yellow);
+  font-family: inherit;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--color-black);
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 2.4rem;
+  right: 2.4rem;
+  transition: all 0.2s ease;
+}
+.ScheduleButton:hover {
+  background-color: var(--color-grey);
+}
+.ScheduleButton:active,
+.ScheduleButton:focus {
+  outline: none;
+}
