@@ -1,0 +1,44 @@
+.Contact {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+.Contact__header {
+  font-size: 6rem;
+}
+.Contact__form {
+  width: 100vw;
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.Contact__formInput {
+  height: 4rem;
+  /* line-height: 2rem; */
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 2px solid var(--color-grey);
+}
+.Contact__formInput:active,
+.Contact__formInput:focus {
+  outline: none;
+  border-bottom: 2px solid var(--color-grey-dark);
+}
+.Contact__form textarea {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* grid-row: 3 / span 2; */
+  overflow: auto;
+  height: auto;
+  resize: vertical;
+  line-height: 4rem;
+}
+.Contact__info {
+  font-size: 2rem;
+}
+.Contact__info span {
+  font-weight: 700;
+}
