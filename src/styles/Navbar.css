@@ -1,12 +1,14 @@
 .Navbar {
   width: 100%;
   height: 10rem;
-  background-color: var(--color-black-secondary);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 2rem;
-  padding: 0 8rem;
+  padding: 0 10rem;
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 .Navbar--more {
   background-color: var(--color-black-secondary);

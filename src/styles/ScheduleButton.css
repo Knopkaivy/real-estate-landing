@@ -12,6 +12,7 @@
   bottom: 2.4rem;
   right: 2.4rem;
   transition: all 0.2s ease;
+  z-index: 3;
 }
 .ScheduleButton:hover {
   background-color: var(--color-grey);

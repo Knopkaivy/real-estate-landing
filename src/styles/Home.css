@@ -1,0 +1,53 @@
+.Home {
+  background-color: var(--color-black-overlay);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.Home__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+.Home__background img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.Home__hero {
+  width: 100%;
+  height: 100vh;
+  color: var(--color-white);
+  font-size: 2rem;
+  line-height: 4rem;
+  margin-top: 24rem;
+  padding: 0 10rem;
+}
+.Home__header {
+  font-size: 6rem;
+  font-weight: 700;
+  max-width: 60rem;
+  line-height: 7.2rem;
+  margin-bottom: 3.2rem;
+}
+.Home__params {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  padding-left: 2rem;
+}
+.Home__price {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 6.4rem 0;
+}
+.Home__scrollButton {
+  cursor: pointer;
+}
+.Home__scrollButton svg {
+  fill: var(--color-white);
+}

@@ -5,6 +5,7 @@
   --color-grey: rgb(191, 191, 191);
   --color-grey-dark: rgb(110, 110, 110);
   --color-black: rgb(33, 33, 33);
+  --color-black-overlay: rgba(33, 33, 33, 0.55);
   --color-black-secondary: rgb(36, 35, 35);
   --color-black-tertiary: rgb(8, 8, 8);
   --color-yellow: rgb(247, 242, 134);
@@ -16,6 +17,9 @@
   padding: 0;
   box-sizing: inherit;
 }
+*::-webkit-scrollbar {
+  display: none;
+}
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -23,6 +27,7 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  /* overflow: hidden; */
 }
 .App {
   display: flex;
@@ -30,6 +35,7 @@ body {
   align-items: center;
   /* min-height: 100vh; */
   position: relative;
+  /* overflow-y: scroll; */
 }
 .button-secondary {
   font-family: inherit;
@@ -44,4 +50,9 @@ body {
 }
 .button-secondary:hover {
   color: var(--color-grey-dark);
+}
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  height: auto;
 }
