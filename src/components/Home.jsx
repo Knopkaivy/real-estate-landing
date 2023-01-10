@@ -9,9 +9,9 @@ const Home = () => {
         <img src={BackgroundImage} alt="product full view" />
       </div>
       <div className="Home__hero">
-        <h1 className="Home__header">Cozy Cottage in the Heart of SOMA</h1>
+        <h1 className="Home__header">Cozy Cottage in Saint Francis Wood</h1>
         <p className="Home__address">
-          500 Terry Francois St. San Francisco, CA
+          75 Yerba Buena Ave San Francisco, CA 94127
         </p>
         <ul className="Home__params">
           <li className="Home__paramsItem">1 Living Room</li>
