@@ -1,0 +1,32 @@
+.VideoTour {
+  background-color: plum;
+  width: 100%;
+  height: 100vh;
+  max-height: 80rem;
+  position: relative;
+  background-color: var(--color-black-overlay);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.VideoTour__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.VideoTour__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.VideoTour__header {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}

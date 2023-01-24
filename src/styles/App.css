@@ -5,7 +5,7 @@
   --color-grey: rgb(191, 191, 191);
   --color-grey-dark: rgb(110, 110, 110);
   --color-black: rgb(33, 33, 33);
-  --color-black-overlay: rgba(33, 33, 33, 0.55);
+  --color-black-overlay: rgba(33, 33, 33, 0.35);
   --color-black-secondary: rgb(36, 35, 35);
   --color-black-tertiary: rgb(8, 8, 8);
   --color-yellow: rgb(247, 242, 134);
@@ -37,6 +37,8 @@ body {
   position: relative;
   /* overflow-y: scroll; */
 }
+.button {
+}
 .button-secondary {
   font-family: inherit;
   font-weight: 700;
@@ -50,6 +52,17 @@ body {
 }
 .button-secondary:hover {
   color: var(--color-grey-dark);
+}
+.button-tertiary {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 2.4rem;
+  width: 12rem;
+  height: 4rem;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  cursor: pointer;
 }
 .container {
   max-width: 90rem;
