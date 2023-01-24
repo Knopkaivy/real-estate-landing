@@ -3,3 +3,38 @@
   width: 100%;
   padding: 8rem;
 }
+.Gallery__imageContainer {
+  display: grid;
+  grid-gap: 3.2rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 54rem 68rem;
+  grid-auto-rows: 54rem;
+  grid-auto-flow: row dense;
+}
+.Gallery__gridItem--xsmall {
+  grid-column-end: span 2;
+}
+.Gallery__gridItem--small {
+  grid-column-end: span 3;
+}
+.Gallery__gridItem--medium {
+  grid-column-end: span 4;
+}
+.Gallery__gridItem--large {
+  grid-column-end: span 6;
+}
+.Gallery__image {
+  overflow: hidden;
+  cursor: pointer;
+}
+.Gallery__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  transition: all 0.5s ease;
+}
+.Gallery__image:hover img {
+  transform: scale(1.05);
+}
