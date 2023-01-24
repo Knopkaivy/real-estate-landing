@@ -1,0 +1,31 @@
+.Info {
+  width: 100%;
+  background-color: var(--color-white);
+  font-size: 2rem;
+}
+.Info__container {
+  padding: 4rem;
+}
+.Info__header {
+  font-size: 6rem;
+  /* max-width: 60rem; */
+  margin-bottom: 6rem;
+}
+.Info__amenities {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+.Info__amenitiesItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Info_amenitiesDescription span {
+  font-weight: 700;
+}
+.Info__description {
+  margin: 6rem 0;
+  max-width: 60rem;
+}
