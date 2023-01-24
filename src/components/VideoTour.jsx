@@ -4,7 +4,7 @@ import '../styles/VideoTour.css';
 
 const VideoTour = () => {
   return (
-    <div className="VideoTour">
+    <div id="video" className="VideoTour">
       <div className="VideoTour__background">
         <img src={VideoBackgroundImage} alt="background" />
       </div>

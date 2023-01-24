@@ -9,10 +9,18 @@ const Navbar = () => {
       </div>
       <div className="Navbar__linksContainer">
         <div className="Navbar__link Navbar__link--active">Home</div>
-        <div className="Navbar__link">Gallery</div>
-        <div className="Navbar__link">Info</div>
-        <div className="Navbar__link">Video Tour</div>
-        <div className="Navbar__link">Contact</div>
+        <a href="#gallery" className="Navbar__link">
+          Gallery
+        </a>
+        <a href="#info" className="Navbar__link">
+          Info
+        </a>
+        <a href="#video" className="Navbar__link">
+          Video Tour
+        </a>
+        <a href="#contact" className="Navbar__link">
+          Contact
+        </a>
       </div>
     </div>
   );

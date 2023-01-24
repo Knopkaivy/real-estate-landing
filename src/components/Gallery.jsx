@@ -20,7 +20,7 @@ const Gallery = () => {
     );
   });
   return (
-    <div className="Gallery">
+    <div id="gallery" className="Gallery">
       <div className="Gallery__imageContainer">{imageList}</div>
     </div>
   );
