@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import ScheduleButton from './components/ScheduleButton';
 import MainPage from './components/MainPage';
 import './styles/App.css';
+import More from './components/More';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <Navbar />
       <ScheduleButton />
       <Routes>
-        <Route index element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/more" element={<More />} />
       </Routes>
       <Contact />
       <Footer />
