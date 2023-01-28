@@ -5,7 +5,7 @@ const Info = () => {
   return (
     <div id="info" className="Info">
       <div className="Info__container container">
-        <h2 className="Info__header">Home Information and Amenities</h2>
+        <h2 className="Info__header header">Home Information and Amenities</h2>
         <ul className="Info__amenities">
           <li className="Info__amenitiesItem">
             <div className="Info__amenitiesIcon">

@@ -8,9 +8,6 @@
   gap: 6rem;
   padding: 10rem 4rem;
 }
-.Contact__header {
-  font-size: 6rem;
-}
 .Contact__form {
   width: 100vw;
   max-width: 90rem;

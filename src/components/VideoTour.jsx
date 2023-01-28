@@ -13,7 +13,7 @@ const VideoTour = () => {
       <div className="VideoTour__background">
         <img src={VideoBackgroundImage} alt="background" />
       </div>
-      <h2 className="VideoTour__header">Home Video Tour</h2>
+      <h2 className="VideoTour__header header">Home Video Tour</h2>
       <button
         className="button-tertiary"
         onClick={() => setVideoOverlayOpen(true)}
