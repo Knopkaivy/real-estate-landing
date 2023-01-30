@@ -1,11 +1,10 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Info.css';
 import InfoAdded from './InfoAdded';
 
 const Info = () => {
   let location = useLocation();
-  console.log(location.pathname);
   return (
     <div id="info" className="Info">
       <div className="Info__container container">
@@ -175,9 +174,9 @@ const Info = () => {
         {location.pathname.includes('more') ? (
           <InfoAdded />
         ) : (
-          <button type="button" className="button-secondary">
+          <Link to={'more'} className="button-secondary">
             More Info
-          </button>
+          </Link>
         )}
       </div>
     </div>
