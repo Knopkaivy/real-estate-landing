@@ -1,17 +1,25 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
+  let location = useLocation();
   return (
-    <div className="Navbar">
+    <div
+      className={`Navbar ${
+        location.pathname.includes('more') && 'Navbar--more'
+      }`}
+    >
       <div className="Navbar__logo">
         <span>Emilia Ingram </span>/ Realtor
       </div>
       <div className="Navbar__linksContainer">
-        <div className="Navbar__link Navbar__link--active">Home</div>
-        <a href="#gallery" className="Navbar__link">
+        <Link to="/" className="Navbar__link Navbar__link--active">
+          Home
+        </Link>
+        <Link to="/#gallery" className="Navbar__link">
           Gallery
-        </a>
+        </Link>
         <a href="#info" className="Navbar__link">
           Info
         </a>

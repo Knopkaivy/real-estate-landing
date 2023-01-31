@@ -28,6 +28,10 @@
 }
 .Navbar__link {
 }
+.Navbar__link:hover,
+.Navbar__link:active {
+  color: var(--color-grey);
+}
 .Navbar__link--active {
   color: var(--color-grey);
 }
