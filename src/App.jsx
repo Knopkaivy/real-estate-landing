@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
