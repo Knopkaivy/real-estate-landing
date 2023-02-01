@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
   let location = useLocation();
   return (
     <div
-      className={`Navbar ${
-        location.pathname.includes('more') && 'Navbar--more'
-      }`}
+      className={`Navbar ${location.pathname.includes('more') &&
+        'Navbar--more'}`}
     >
       <div className="Navbar__logo">
         <span>Emilia Ingram </span>/ Realtor
@@ -17,18 +17,18 @@ const Navbar = () => {
         <Link to="/" className="Navbar__link Navbar__link--active">
           Home
         </Link>
-        <Link to="/#gallery" className="Navbar__link">
+        <HashLink to="/#gallery" className="Navbar__link">
           Gallery
-        </Link>
-        <a href="#info" className="Navbar__link">
+        </HashLink>
+        <HashLink to="/#info" className="Navbar__link">
           Info
-        </a>
-        <a href="#video" className="Navbar__link">
+        </HashLink>
+        <HashLink to="/#video" className="Navbar__link">
           Video Tour
-        </a>
-        <a href="#contact" className="Navbar__link">
+        </HashLink>
+        <HashLink to="/#contact" className="Navbar__link">
           Contact
-        </a>
+        </HashLink>
       </div>
     </div>
   );
