@@ -1,0 +1,42 @@
+.Carousel {
+  width: 90vw;
+  height: 80vh;
+  margin: 0 auto;
+  overflow: hidden;
+  overflow-x: scroll;
+  position: relative;
+}
+.Carousel__button {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-grey-light-overlay);
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.Carousel__button:hover {
+  opacity: 1;
+}
+.Carousel__button--left {
+  left: 0;
+}
+.Carousel__button--right {
+  right: 0;
+}
+.Carousel__itemContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4rem;
+  height: 100%;
+  transition: all 0.5s ease-out;
+}
+.Carousel__imageListItem img {
+  height: 100%;
+}

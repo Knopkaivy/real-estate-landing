@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import Neighborhood from './Neighborhood';
-import Map from './Map';
-import '../styles/More.css';
+import Carousel from './Carousel';
 import Info from './Info';
+import Map from './Map';
+import Neighborhood from './Neighborhood';
+import '../styles/More.css';
 
 const More = () => {
   useEffect(() => {
@@ -11,6 +12,7 @@ const More = () => {
   return (
     <div className="More">
       <Info />
+      <Carousel />
       <Neighborhood />
       <Map />
     </div>
