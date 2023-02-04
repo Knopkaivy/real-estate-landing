@@ -9,7 +9,7 @@ import '../styles/Map.css';
 
 const Map = () => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyBIy94Y4rd-uMzwE72Joe36DjuqHRt2G6c',
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
   });
   if (!isLoaded) return <div>Loading...</div>;
   return <MapInstance />;
