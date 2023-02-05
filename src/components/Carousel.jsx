@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
+import ImageOverlay from './ImageOverlay';
 import Images from './Images';
 import '../styles/Carousel.css';
 
@@ -27,6 +28,7 @@ const Carousel = () => {
   });
   return (
     <div className="Carousel">
+      <ImageOverlay />
       <div
         className="Carousel__button Carousel__button--left"
         onClick={() => handleClick('left')}
