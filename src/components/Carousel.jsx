@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { BsChevronLeft } from 'react-icons/bs';
+import { BsChevronRight } from 'react-icons/bs';
 import Images from './Images';
 import '../styles/Carousel.css';
 
@@ -6,15 +8,10 @@ const Carousel = () => {
   const [positionX, setPositionX] = useState(0);
   let handleClick = (direction) => {
     let newX = positionX;
-    console.log(newX);
     if (direction === 'left' && newX >= 100) {
-      console.log('going left');
       newX -= 100;
-      console.log(newX);
     } else if (direction === 'right' && newX <= 500) {
-      console.log('going right');
       newX += 100;
-      console.log(newX);
     } else {
       return;
     }
@@ -31,16 +28,20 @@ const Carousel = () => {
   return (
     <div className="Carousel">
       <div
-        className="Carousel__button Carousel__button--left button-secondary"
+        className="Carousel__button Carousel__button--left"
         onClick={() => handleClick('left')}
       >
-        <div>Click Left</div>
+        <div>
+          <BsChevronLeft />
+        </div>
       </div>
       <div
-        className="Carousel__button Carousel__button--right button-secondary"
+        className="Carousel__button Carousel__button--right"
         onClick={() => handleClick('right')}
       >
-        <div>Click Right</div>
+        <div>
+          <BsChevronRight />
+        </div>
       </div>
       <div
         className="Carousel__itemContainer"

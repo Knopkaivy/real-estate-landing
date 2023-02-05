@@ -20,6 +20,9 @@
   flex-direction: column;
   align-items: center;
 }
+.Info__amenitiesIcon {
+  font-size: 6rem;
+}
 .Info_amenitiesDescription span {
   font-weight: 700;
 }
