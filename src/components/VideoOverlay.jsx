@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { IoClose } from 'react-icons/io5';
 import '../styles/VideoOverlay.css';
 
 const VideoOverlay = ({ isOpen, closeOverlay }) => {
@@ -14,7 +15,7 @@ const VideoOverlay = ({ isOpen, closeOverlay }) => {
     <div className={`VideoOverlay ${isOpen && 'VideoOverlay--open'}`}>
       <div className="VideoOverlay__closeButtonContainer">
         <button type="button" onClick={handleCloseOverlay}>
-          x
+          <IoClose />
         </button>
       </div>
       <div className="VideoOverlay__videoContainer">
