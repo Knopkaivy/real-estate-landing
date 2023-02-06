@@ -12,8 +12,6 @@
   z-index: 1;
   height: 100%;
   width: 10rem;
-  font-size: 4rem;
-  color: var(--color-grey-dark);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,12 +22,6 @@
 }
 .Carousel__button:hover {
   opacity: 1;
-}
-.Carousel__button--left {
-  left: 0;
-}
-.Carousel__button--right {
-  right: 0;
 }
 .Carousel__itemContainer {
   display: flex;

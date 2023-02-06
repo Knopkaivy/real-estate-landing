@@ -40,6 +40,24 @@ body {
   /* overflow-y: scroll; */
 }
 .button {
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.button-icon {
+  font-size: 2.4rem;
+  color: var(--color-grey-dark);
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.button--left {
+  left: 0;
+}
+.button--right {
+  right: 0;
 }
 .button-secondary {
   font-family: inherit;

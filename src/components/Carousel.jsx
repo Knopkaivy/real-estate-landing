@@ -12,7 +12,6 @@ const Carousel = () => {
   let closeOverlay = () => setImageOverlayOpen(false);
 
   let openOverlay = () => {
-    console.log('overlay open!');
     setImageOverlayOpen(true);
   };
 
@@ -45,20 +44,20 @@ const Carousel = () => {
     <div className="Carousel">
       <ImageOverlay isOpen={imageOverlayOpen} closeOverlay={closeOverlay} />
       <div
-        className="Carousel__button Carousel__button--left"
+        className="Carousel__button button--left"
         onClick={() => handleClick('left')}
       >
-        <div>
+        <button className="button button-icon">
           <BsChevronLeft />
-        </div>
+        </button>
       </div>
       <div
-        className="Carousel__button Carousel__button--right"
+        className="Carousel__button button--right"
         onClick={() => handleClick('right')}
       >
-        <div>
+        <button className="button button-icon">
           <BsChevronRight />
-        </div>
+        </button>
       </div>
       <div
         className="Carousel__itemContainer"
