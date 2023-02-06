@@ -6,7 +6,16 @@ import Images from './Images';
 import '../styles/Carousel.css';
 
 const Carousel = () => {
+  const [imageOverlayOpen, setImageOverlayOpen] = useState(false);
   const [positionX, setPositionX] = useState(0);
+
+  let closeOverlay = () => setImageOverlayOpen(false);
+
+  let openOverlay = () => {
+    console.log('overlay open!');
+    setImageOverlayOpen(true);
+  };
+
   let handleClick = (direction) => {
     let newX = positionX;
     if (direction === 'left' && newX >= 100) {
@@ -18,17 +27,23 @@ const Carousel = () => {
     }
     return setPositionX(newX);
   };
+
   const reorderedImageArray = [...Images.slice(5), ...Images.slice(0, 5)];
   const carouselImageList = reorderedImageArray.map((image, index) => {
     return (
-      <div key={index} className="Carousel__imageListItem">
+      <div
+        key={index}
+        className="Carousel__imageListItem"
+        onClick={openOverlay}
+      >
         <img src={image} alt="" />
       </div>
     );
   });
+
   return (
     <div className="Carousel">
-      <ImageOverlay />
+      <ImageOverlay isOpen={imageOverlayOpen} closeOverlay={closeOverlay} />
       <div
         className="Carousel__button Carousel__button--left"
         onClick={() => handleClick('left')}
