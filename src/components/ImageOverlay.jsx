@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsArrowsAngleExpand } from 'react-icons/bs';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
@@ -6,7 +6,13 @@ import { IoClose } from 'react-icons/io5';
 import Images from './Images';
 import '../styles/ImageOverlay.css';
 
-const ImageOverlay = ({ isOpen, closeOverlay }) => {
+const ImageOverlay = ({ isOpen, openingImageIndex, closeOverlay }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState();
+  useEffect(() => {
+    if (openingImageIndex !== currentImageIndex) {
+      setCurrentImageIndex(openingImageIndex);
+    }
+  }, [openingImageIndex]);
   let handleCloseOverlay = () => closeOverlay();
   let handleClick = (e) => {
     console.log('clicked chevron button');
@@ -42,7 +48,7 @@ const ImageOverlay = ({ isOpen, closeOverlay }) => {
         </button>
       </div>
       <div className="ImageOverlay__imageContainer">
-        <img src={Images[0]} alt="" />
+        <img src={Images[currentImageIndex]} alt="" />
       </div>
     </div>
   );

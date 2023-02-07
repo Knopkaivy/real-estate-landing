@@ -15,7 +15,7 @@ const Gallery = () => {
           'Gallery__gridItem--medium'} ${index === 3 &&
           'Gallery__gridItem--large'}`}
       >
-        <img src={image} alt="" />
+        <img src={image} alt="" id={index} />
       </div>
     );
   });

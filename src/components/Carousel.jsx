@@ -7,12 +7,17 @@ import '../styles/Carousel.css';
 
 const Carousel = () => {
   const [imageOverlayOpen, setImageOverlayOpen] = useState(false);
+  const [openingImageIndex, setOpeningImageIndex] = useState();
   const [positionX, setPositionX] = useState(0);
 
   let closeOverlay = () => setImageOverlayOpen(false);
 
-  let openOverlay = () => {
-    setImageOverlayOpen(true);
+  let openOverlay = async (e) => {
+    if (e.target.id) {
+      await setOpeningImageIndex(e.target.id);
+
+      setImageOverlayOpen(true);
+    }
   };
 
   let handleClick = (direction) => {
@@ -35,14 +40,18 @@ const Carousel = () => {
         className="Carousel__imageListItem"
         onClick={openOverlay}
       >
-        <img src={image} alt="" />
+        <img src={image} alt="" id={index} />
       </div>
     );
   });
 
   return (
     <div className="Carousel">
-      <ImageOverlay isOpen={imageOverlayOpen} closeOverlay={closeOverlay} />
+      <ImageOverlay
+        isOpen={imageOverlayOpen}
+        openingImageIndex={openingImageIndex}
+        closeOverlay={closeOverlay}
+      />
       <div
         className="Carousel__button button--left"
         onClick={() => handleClick('left')}
