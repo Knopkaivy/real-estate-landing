@@ -14,8 +14,29 @@ const ImageOverlay = ({ isOpen, openingImageIndex, closeOverlay }) => {
     }
   }, [openingImageIndex]);
   let handleCloseOverlay = () => closeOverlay();
-  let handleClick = (e) => {
-    console.log('clicked chevron button');
+
+  let handleClickLeft = () => {
+    let newIndex = Number(currentImageIndex);
+    if (newIndex > 0) {
+      newIndex -= 1;
+      setCurrentImageIndex(newIndex);
+    } else if (newIndex === 0) {
+      newIndex = Images.length - 1;
+      setCurrentImageIndex(newIndex);
+    } else {
+      return;
+    }
+    return;
+  };
+  let handleClickRight = () => {
+    let newIndex = Number(currentImageIndex);
+    if (newIndex < Images.length - 1) {
+      newIndex += 1;
+      setCurrentImageIndex(newIndex);
+    } else if (newIndex === Images.length - 1) {
+      newIndex = 0;
+      setCurrentImageIndex(newIndex);
+    }
   };
   return (
     <div className={`ImageOverlay ${isOpen && 'ImageOverlay--open'}`}>
@@ -33,7 +54,7 @@ const ImageOverlay = ({ isOpen, openingImageIndex, closeOverlay }) => {
       </nav>
       <div
         className="ImageOverlay__button button--left"
-        onClick={() => handleClick('left')}
+        onClick={() => handleClickLeft()}
       >
         <button className="button button-icon">
           <BsChevronLeft />
@@ -41,7 +62,7 @@ const ImageOverlay = ({ isOpen, openingImageIndex, closeOverlay }) => {
       </div>
       <div
         className="ImageOverlay__button button--right"
-        onClick={() => handleClick('right')}
+        onClick={() => handleClickRight()}
       >
         <button className="button button-icon">
           <BsChevronRight />

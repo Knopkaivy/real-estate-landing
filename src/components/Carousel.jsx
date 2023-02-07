@@ -32,8 +32,8 @@ const Carousel = () => {
     return setPositionX(newX);
   };
 
-  const reorderedImageArray = [...Images.slice(5), ...Images.slice(0, 5)];
-  const carouselImageList = reorderedImageArray.map((image, index) => {
+  // const reorderedImageArray = [...Images.slice(5), ...Images.slice(0, 5)];
+  const carouselImageList = Images.map((image, index) => {
     return (
       <div
         key={index}
