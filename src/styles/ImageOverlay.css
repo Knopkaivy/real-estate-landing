@@ -20,7 +20,7 @@
   z-index: 2;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .ImageOverlay__button {
   position: absolute;

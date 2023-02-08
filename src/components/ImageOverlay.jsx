@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { BsArrowsAngleExpand } from 'react-icons/bs';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 import { IoClose } from 'react-icons/io5';
@@ -41,9 +40,6 @@ const ImageOverlay = ({ isOpen, openingImageIndex, closeOverlay }) => {
   return (
     <div className={`ImageOverlay ${isOpen && 'ImageOverlay--open'}`}>
       <nav className="ImageOverlay__nav">
-        <button type="button" className="button button-icon">
-          <BsArrowsAngleExpand />
-        </button>
         <button
           type="button"
           className="button button-icon"
