@@ -12,9 +12,9 @@ const Carousel = () => {
 
   let closeOverlay = () => setImageOverlayOpen(false);
 
-  let openOverlay = async (e) => {
+  let openOverlay = (e) => {
     if (e.target.id) {
-      await setOpeningImageIndex(e.target.id);
+      setOpeningImageIndex(e.target.id);
 
       setImageOverlayOpen(true);
     }
