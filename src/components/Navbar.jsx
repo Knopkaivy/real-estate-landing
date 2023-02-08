@@ -11,7 +11,9 @@ const Navbar = () => {
         'Navbar--more'}`}
     >
       <div className="Navbar__logo">
-        <span>Emilia Ingram </span>/ Realtor
+        <Link to="/">
+          <span>Emilia Ingram </span>/ Realtor
+        </Link>
       </div>
       <div className="Navbar__linksContainer">
         <Link to="/" className="Navbar__link Navbar__link--active">
