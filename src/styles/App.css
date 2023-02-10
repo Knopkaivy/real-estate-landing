@@ -41,6 +41,7 @@ body {
 }
 .button {
   font-family: inherit;
+  font-size: inherit;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -83,6 +84,17 @@ body {
   color: inherit;
   border: none;
   cursor: pointer;
+}
+.button-yellow {
+  background-color: var(--color-yellow);
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--color-black);
+  border: none;
+  transition: all 0.2s ease;
+}
+.button-yellow:hover {
+  background-color: var(--color-grey);
 }
 .container {
   max-width: 90rem;

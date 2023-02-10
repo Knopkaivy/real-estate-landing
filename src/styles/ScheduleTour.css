@@ -1,0 +1,70 @@
+.ScheduleTour {
+  width: 100%;
+
+  /* ! margin */
+  margin-top: 10rem;
+  font-size: 1.6rem;
+}
+.ScheduleTour__container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  border: 2px solid coral;
+  padding: 4rem;
+}
+.ScheduleTour__buttonReturn {
+  padding: 1rem;
+  line-height: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.ScheduleTour__icon {
+  font-size: inherit;
+  /* padding: 4px; */
+}
+.ScheduleTour__header h2 {
+  font-size: 3.2rem;
+  /* !margin */
+  margin-bottom: 1.6rem;
+}
+.ScheduleTour__main {
+  height: 40rem;
+  display: flex;
+  justify-content: space-between;
+  /* ! gap */
+  gap: 4rem;
+  border: 2px solid orangered;
+}
+.ScheduleTour__dateAndTime {
+  flex-basis: 70%;
+  /* ! gap */
+  gap: 2rem;
+  border: 2px solid plum;
+}
+.ScheduleTour__dtContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.ScheduleTour__detail {
+  flex-basis: 30%;
+  gap: 2rem;
+}
+.ScheduleTour__dtHeader,
+.ScheduleTour__detailHeader {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-black);
+}
+.ScheduleTour__detailSection p:not(:first-child) {
+  font-size: 1.4rem;
+  color: var(--color-grey);
+}
+.ScheduleTour__buttonNext {
+  width: 100%;
+  height: 4.8rem;
+}
