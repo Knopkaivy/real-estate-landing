@@ -22,7 +22,6 @@
 }
 .ScheduleTour__icon {
   font-size: inherit;
-  /* padding: 4px; */
 }
 .ScheduleTour__header h2 {
   font-size: 3.2rem;
@@ -41,11 +40,6 @@
   /* ! gap */
   gap: 2rem;
 }
-.ScheduleTour__dtContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
 .ScheduleTour__detail {
   flex-basis: 40%;
   display: flex;
