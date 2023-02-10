@@ -1,6 +1,5 @@
 .ScheduleTour {
   width: 100%;
-
   /* ! margin */
   margin-top: 10rem;
   font-size: 1.6rem;
@@ -11,7 +10,6 @@
   flex-direction: column;
   justify-content: center;
   gap: 4rem;
-  border: 2px solid coral;
   padding: 4rem;
 }
 .ScheduleTour__buttonReturn {
@@ -37,18 +35,42 @@
   justify-content: space-between;
   /* ! gap */
   gap: 4rem;
-  border: 2px solid orangered;
 }
 .ScheduleTour__dateAndTime {
-  flex-basis: 70%;
+  flex-basis: 60%;
   /* ! gap */
   gap: 2rem;
-  border: 2px solid plum;
 }
 .ScheduleTour__dtContainer {
   display: flex;
   justify-content: space-between;
 }
+
+.ScheduleTour__detail {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  /* !gap */
+  gap: 2rem;
+}
+.ScheduleTour__dtHeader,
+.ScheduleTour__detailHeader {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-black);
+}
+.ScheduleTour__detailSection p:not(:first-child) {
+  font-size: 1.4rem;
+  color: var(--color-grey-dark);
+}
+.ScheduleTour__buttonNext {
+  width: 100%;
+  height: 4.8rem;
+}
+
+/* & DATE PICKER STYLE OVERRIDES */
+
 .ScheduleTour__datePicker {
   width: 24rem;
   height: 4rem;
@@ -64,28 +86,6 @@
 .ScheduleTour__datePicker:active,
 .ScheduleTour__datePicker:focus {
   outline: none;
-}
-.ScheduleTour__calendar {
-  color: red;
-}
-.ScheduleTour__detail {
-  flex-basis: 30%;
-  gap: 2rem;
-}
-.ScheduleTour__dtHeader,
-.ScheduleTour__detailHeader {
-  font-size: 2rem;
-  font-weight: 700;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-black);
-}
-.ScheduleTour__detailSection p:not(:first-child) {
-  font-size: 1.4rem;
-  color: var(--color-grey);
-}
-.ScheduleTour__buttonNext {
-  width: 100%;
-  height: 4.8rem;
 }
 .react-datepicker__month-container {
   width: auto;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { addDays, getDay, setHours, setMinutes, subDays } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
@@ -8,7 +8,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const ScheduleTour = () => {
   const navigate = useNavigate();
-  const [startDate, setStartDate] = useState();
+  const [startDate, setStartDate] = useState(null);
   const isWeekday = (date) => {
     const day = getDay(date);
     return day !== 0 && day !== 6;
@@ -19,6 +19,11 @@ const ScheduleTour = () => {
 
     return currentDate.getTime() < selectedDate.getTime();
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <div className="ScheduleTour">
       <div className="ScheduleTour__container container">
@@ -46,6 +51,7 @@ const ScheduleTour = () => {
               <div className="ScheduleTour__date">
                 <DatePicker
                   className="ScheduleTour__datePicker"
+                  inline={true}
                   selected={startDate}
                   showTimeSelect
                   minDate={subDays(new Date(), 0)}
@@ -61,14 +67,17 @@ const ScheduleTour = () => {
                   onChange={(date) => setStartDate(date)}
                 />
               </div>
-              <div className="ScheduleTour__time">Time</div>
+              {/* <div className="ScheduleTour__time">Time</div> */}
             </div>
           </div>
           <div className="ScheduleTour__detail">
             <h3 className="ScheduleTour__detailHeader">Service Details</h3>
             <div className="ScheduleTour__detailSection">
-              <p>Selected Date Appear Here</p>
-              <p>Staff Member Name</p>
+              <p>
+                {startDate === null || startDate.getHours() === 0
+                  ? 'Select Date and Time'
+                  : startDate.toLocaleString('en-US')}
+              </p>
               <p>1 hr</p>
               <p>Free</p>
             </div>
