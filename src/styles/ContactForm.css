@@ -1,0 +1,29 @@
+.ContactForm {
+  width: 100%;
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.ContactForm__input {
+  height: 4rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  /* !border */
+  border-bottom: 2px solid var(--color-grey-dark);
+}
+.ContactForm__input:active,
+.ContactForm__input:focus {
+  outline: none;
+  /* !border */
+  border-bottom: 2px solid var(--color-grey-dark);
+}
+.ContactForm textarea {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  overflow: auto;
+  height: auto;
+  resize: vertical;
+  line-height: 4rem;
+}

@@ -3,13 +3,14 @@ import DatePicker from 'react-datepicker';
 import { addDays, getDay, setHours, setMinutes, subDays } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 import { BsChevronLeft } from 'react-icons/bs';
+import ContactForm from './ContactForm';
 import '../styles/ScheduleTour.css';
 import 'react-datepicker/dist/react-datepicker.css';
-import ScheduleForm from './ScheduleForm';
 
 const ScheduleTour = () => {
   const navigate = useNavigate();
-  const [isFormOpen, setIsFormOpen] = useState(true);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [callFormSubmit, setCallFormSubmit] = useState(false);
   const [startDate, setStartDate] = useState(null);
   const isWeekday = (date) => {
     const day = getDay(date);
@@ -23,8 +24,25 @@ const ScheduleTour = () => {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0 });
   }, []);
+
+  const handleClickButtonReturn = () => {
+    if (isFormOpen) {
+      setIsFormOpen(false);
+    } else {
+      navigate(-1);
+    }
+    return;
+  };
+
+  const resetCallFormSubmit = () => {
+    setCallFormSubmit(false);
+  };
+  const resetDate = () => {
+    setStartDate(null);
+    setIsFormOpen(false);
+  };
 
   return (
     <div className="ScheduleTour">
@@ -33,7 +51,7 @@ const ScheduleTour = () => {
           <button
             type="button"
             className="ScheduleTour__buttonReturn button"
-            onClick={() => navigate(-1)}
+            onClick={handleClickButtonReturn}
           >
             <BsChevronLeft className="ScheduleTour__icon" />
             <span>Back</span>
@@ -52,7 +70,12 @@ const ScheduleTour = () => {
               {isFormOpen ? 'Fill Out Your details' : 'Select a Date and Time'}
             </h3>
             {isFormOpen ? (
-              <ScheduleForm />
+              <ContactForm
+                date={startDate}
+                resetDate={resetDate}
+                callFormSubmit={callFormSubmit}
+                resetCallFormSubmit={resetCallFormSubmit}
+              />
             ) : (
               <DatePicker
                 className="ScheduleTour__datePicker"
@@ -88,6 +111,7 @@ const ScheduleTour = () => {
               <button
                 type="button"
                 className="ScheduleTour__buttonNext button button-yellow"
+                onClick={() => setCallFormSubmit(true)}
               >
                 Submit
               </button>
@@ -95,6 +119,7 @@ const ScheduleTour = () => {
               <button
                 type="button"
                 className="ScheduleTour__buttonNext button button-yellow"
+                onClick={() => setIsFormOpen(true)}
               >
                 Next
               </button>

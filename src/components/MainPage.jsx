@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Home from './Home';
 import Gallery from './Gallery';
 import Info from './Info';
 import VideoTour from './VideoTour';
 
 const MainPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
     <React.Fragment>
       <Home />
