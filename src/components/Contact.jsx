@@ -1,10 +1,16 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import ContactForm from './ContactForm';
 import '../styles/Contact.css';
 
 const Contact = () => {
+  const location = useLocation();
   return (
-    <div id="contact" className="Contact">
+    <div
+      id="contact"
+      className={`Contact ${location.pathname.includes('schedule') &&
+        'Contact--none'}`}
+    >
       <div className="Contact__container container">
         <h2 className="Contact__header header">Contact Us Today!</h2>
         <ContactForm />

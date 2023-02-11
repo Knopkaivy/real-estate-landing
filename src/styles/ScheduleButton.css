@@ -21,3 +21,6 @@
 .ScheduleButton:focus {
   outline: none;
 }
+.ScheduleButton--none {
+  display: none;
+}
