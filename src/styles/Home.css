@@ -32,7 +32,7 @@
   font-weight: 700;
   max-width: 56rem;
   line-height: 8rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: var(--margin-medium);
 }
 .Home__params {
   display: flex;
@@ -43,7 +43,7 @@
 .Home__price {
   font-size: 6rem;
   font-weight: 700;
-  margin: 6.4rem 0;
+  margin: var(--margin-large) 0;
 }
 .Home__scrollButton {
   cursor: pointer;

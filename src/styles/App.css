@@ -10,6 +10,11 @@
   --color-black-secondary: rgb(36, 35, 35);
   --color-black-tertiary: rgb(8, 8, 8);
   --color-yellow: rgb(247, 242, 134);
+
+  --margin-small: 2rem;
+  --margin-medium: 4rem;
+  --margin-large: 6rem;
+  --margin-xlarge: 10rem;
 }
 *,
 *::before,
@@ -106,6 +111,6 @@ a {
   text-decoration: none;
 }
 .header {
-  font-size: 6rem;
-  margin-bottom: 6rem;
+  font-size: 5.4rem;
+  margin-bottom: var(--margin-medium);
 }

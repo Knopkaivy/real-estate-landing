@@ -6,9 +6,7 @@
 .Info__container {
   padding: 6rem 4rem 10rem 4rem;
 }
-.Info__header {
-  margin-bottom: 6rem;
-}
+
 .Info__amenities {
   display: flex;
   flex-direction: row;
@@ -27,6 +25,6 @@
   font-weight: 700;
 }
 .Info__description {
-  margin: 6rem 0;
+  margin: var(--margin-large) 0;
   max-width: 60rem;
 }

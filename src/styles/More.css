@@ -1,4 +1,4 @@
 .More {
-  margin-top: 10rem;
+  margin-top: var(--margin-xlarge);
   width: 100%;
 }

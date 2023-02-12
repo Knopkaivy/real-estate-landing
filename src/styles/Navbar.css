@@ -26,10 +26,10 @@
   flex-direction: row;
   gap: 4rem;
 }
-.Navbar__link {
-}
 .Navbar__link:hover,
-.Navbar__link:active {
+.Navbar__link:active,
+.Navbar__logo span:hover,
+.Navbar__logo span:active {
   color: var(--color-grey);
 }
 .Navbar__link--active {
