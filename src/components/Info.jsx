@@ -47,10 +47,9 @@ const Info = () => {
           </li>
         </ul>
         <div className="Info__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo unde
-          voluptas, placeat facilis exercitationem cumque adipisci dicta
-          tenetur, eaque deleniti et, accusantium debitis molestiae rem
-          provident. A vel eum magni!
+          This St. Francis Wood home combines a chalet feel with a modern touch.
+          Dramatic mid-century design, open loft style floor plan and generous
+          natural light.
         </div>
         {location.pathname.includes('more') ? (
           <InfoAdded />
