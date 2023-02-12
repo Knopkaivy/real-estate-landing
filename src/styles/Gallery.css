@@ -6,7 +6,6 @@
 .Gallery__imageContainer {
   display: grid;
   grid-gap: 3.2rem;
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 54rem 68rem;
   grid-auto-rows: 54rem;

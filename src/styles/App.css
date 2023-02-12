@@ -94,6 +94,7 @@ body {
   max-width: 90rem;
   margin: 0 auto;
   height: auto;
+  padding: 8rem 4rem;
 }
 a {
   color: inherit;

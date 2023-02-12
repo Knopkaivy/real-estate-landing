@@ -3,9 +3,6 @@
   background-color: var(--color-white);
   font-size: 2rem;
 }
-.Info__container {
-  padding: 6rem 4rem 10rem 4rem;
-}
 
 .Info__amenities {
   display: flex;

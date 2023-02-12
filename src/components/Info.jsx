@@ -10,7 +10,7 @@ const Info = () => {
   let location = useLocation();
   return (
     <div id="info" className="Info">
-      <div className="Info__container container">
+      <div className="container">
         <h2 className="header">Home Information and Amenities</h2>
         <ul className="Info__amenities">
           <li className="Info__amenitiesItem">

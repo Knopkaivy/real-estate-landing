@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  padding: 10rem 4rem;
 }
 .Contact__form {
   width: 100vw;
