@@ -16,7 +16,7 @@ const VideoTour = () => {
       </div>
       <h2 className="header">Home Video Tour</h2>
       <button
-        className="button-tertiary"
+        className="button button-tertiary"
         onClick={() => setVideoOverlayOpen(true)}
       >
         <BsPlayCircle />

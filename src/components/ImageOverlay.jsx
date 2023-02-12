@@ -49,7 +49,7 @@ const ImageOverlay = ({ isOpen, openingImageIndex, closeOverlay }) => {
         </button>
       </nav>
       <div
-        className="ImageOverlay__button button--left"
+        className="ImageOverlay__button button__chevron--left"
         onClick={() => handleClickLeft()}
       >
         <button className="button button-icon">
@@ -57,7 +57,7 @@ const ImageOverlay = ({ isOpen, openingImageIndex, closeOverlay }) => {
         </button>
       </div>
       <div
-        className="ImageOverlay__button button--right"
+        className="ImageOverlay__button button__chevron--right"
         onClick={() => handleClickRight()}
       >
         <button className="button button-icon">

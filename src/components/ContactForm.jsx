@@ -88,7 +88,7 @@ const ContactForm = ({
         <input
           type="button"
           value="Submit"
-          className="button-secondary"
+          className="button button-secondary"
           onClick={handleSubmit}
         />
       )}

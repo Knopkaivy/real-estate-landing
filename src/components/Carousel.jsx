@@ -53,7 +53,7 @@ const Carousel = () => {
         closeOverlay={closeOverlay}
       />
       <div
-        className="Carousel__button button--left"
+        className="Carousel__button button__chevron--left"
         onClick={() => handleClick('left')}
       >
         <button className="button button-icon">
@@ -61,7 +61,7 @@ const Carousel = () => {
         </button>
       </div>
       <div
-        className="Carousel__button button--right"
+        className="Carousel__button button__chevron--right"
         onClick={() => handleClick('right')}
       >
         <button className="button button-icon">
