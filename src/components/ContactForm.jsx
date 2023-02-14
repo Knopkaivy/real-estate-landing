@@ -24,7 +24,8 @@ const ContactForm = ({
     setMessage('');
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     let formData = {
       firstName,
       lastName,
@@ -44,7 +45,11 @@ const ContactForm = ({
     }
   }, [callFormSubmit]);
   return (
-    <form action="submit" onSubmit={handleSubmit} className="ContactForm">
+    <form
+      action="submit"
+      onSubmit={(e) => handleSubmit(e)}
+      className="ContactForm"
+    >
       <input
         type="text"
         placeholder="First Name"
@@ -68,7 +73,7 @@ const ContactForm = ({
       />
       <input
         type="email"
-        // required
+        required
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -86,10 +91,10 @@ const ContactForm = ({
       ></textarea>
       {!location.pathname.includes('schedule') && (
         <input
-          type="button"
+          type="submit"
           value="Submit"
           className="button button-secondary"
-          onClick={handleSubmit}
+          // onClick={handleSubmit}
         />
       )}
     </form>
