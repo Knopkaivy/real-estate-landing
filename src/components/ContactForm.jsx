@@ -2,12 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/ContactForm.css';
 
-const ContactForm = ({
-  date,
-  resetDate,
-  callFormSubmit,
-  resetCallFormSubmit,
-}) => {
+const ContactForm = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [firstName, setFirstName] = useState('');
@@ -36,14 +31,6 @@ const ContactForm = ({
     resetFormValues();
     alert('Your request has been submitted. Thank you');
   };
-  useEffect(() => {
-    if (callFormSubmit) {
-      handleSubmit();
-      resetCallFormSubmit();
-      resetDate();
-      navigate('/schedule');
-    }
-  }, [callFormSubmit]);
   return (
     <form
       action="submit"
@@ -74,7 +61,7 @@ const ContactForm = ({
       <input
         type="email"
         required
-        placeholder="Email"
+        placeholder="Email *"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="ContactForm__input"
@@ -89,14 +76,7 @@ const ContactForm = ({
         onChange={(e) => setMessage(e.target.value)}
         className="ContactForm__input"
       ></textarea>
-      {!location.pathname.includes('schedule') && (
-        <input
-          type="submit"
-          value="Submit"
-          className="button button-secondary"
-          // onClick={handleSubmit}
-        />
-      )}
+      <input type="submit" value="Submit" className="button button-secondary" />
     </form>
   );
 };

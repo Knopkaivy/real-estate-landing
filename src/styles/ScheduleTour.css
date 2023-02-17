@@ -26,7 +26,6 @@
   margin-bottom: var(--margin-small);
 }
 .ScheduleTour__main {
-  /* height: 48rem; */
   display: flex;
   justify-content: space-between;
   /* ! gap */
