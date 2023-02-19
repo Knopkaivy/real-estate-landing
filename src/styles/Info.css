@@ -25,3 +25,18 @@
   margin: var(--margin-large) 0;
   max-width: 60rem;
 }
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+  .Info__amenitiesIcon {
+    font-size: 4rem;
+  }
+  .Info__amenities {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 576px) {
+}

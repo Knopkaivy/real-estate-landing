@@ -25,7 +25,7 @@
   font-size: 2rem;
   line-height: 4rem;
   margin-top: 24rem;
-  padding: 0 10rem;
+  padding: 0 var(--padding-xlarge);
 }
 .Home__header {
   font-size: 6rem;
@@ -38,7 +38,7 @@
   display: flex;
   flex-direction: row;
   gap: 4rem;
-  padding-left: 2rem;
+  padding-left: var(--padding-small);
 }
 .Home__price {
   font-size: 6rem;
@@ -52,4 +52,15 @@
 }
 .Home__scrollButton svg {
   fill: var(--color-white);
+}
+@media (max-width: 400px) {
+  .Home__header,
+  .Home__price {
+    font-size: 4rem;
+  }
+  .Home__params {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: var(--margin-medium);
+  }
 }

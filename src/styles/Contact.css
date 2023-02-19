@@ -5,7 +5,7 @@
 .Contact--none {
   display: none;
 }
-.Contact__container {
+.Contact__formContainer {
   display: flex;
   flex-direction: column;
   gap: 6rem;
@@ -19,7 +19,6 @@
 }
 .Contact__formInput {
   height: 4rem;
-  /* line-height: 2rem; */
   font-family: inherit;
   font-size: 1.6rem;
   border: none;
@@ -33,7 +32,6 @@
 .Contact__form textarea {
   grid-column-start: 1;
   grid-column-end: 3;
-  /* grid-row: 3 / span 2; */
   overflow: auto;
   height: auto;
   resize: vertical;

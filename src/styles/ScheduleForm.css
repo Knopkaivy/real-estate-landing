@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  padding: 4rem 0 9rem 0;
+  padding: var(--padding-medium) 0 9rem 0;
   flex-basis: 60%;
 }
 .ScheduleForm__input {
@@ -41,4 +41,10 @@
   flex-direction: column;
   /* !gap */
   gap: 2rem;
+}
+
+@media (max-width: 400px) {
+  .ScheduleForm {
+    flex-direction: column;
+  }
 }

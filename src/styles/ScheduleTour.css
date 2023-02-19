@@ -77,6 +77,7 @@
 .ScheduleTour__datePicker:focus {
   outline: none;
 }
+
 .react-datepicker__month-container {
   width: auto;
   height: auto;
@@ -119,4 +120,18 @@
 }
 .react-datepicker__time-container {
   border: none !important;
+}
+.react-datepicker__time-list-item {
+  height: 4rem !important;
+  line-height: 4rem !important;
+}
+
+@media (max-width: 400px) {
+  .ScheduleTour__main {
+    flex-direction: column;
+  }
+  .ScheduleTour__datePicker {
+    display: flex;
+    justify-content: space-around;
+  }
 }

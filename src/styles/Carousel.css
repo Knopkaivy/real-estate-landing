@@ -34,3 +34,19 @@
 .Carousel__imageListItem img {
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  .Carousel {
+    height: 50vh;
+  }
+}
+@media (max-width: 576px) {
+  .Carousel {
+    height: 40vh;
+  }
+}
+@media (max-width: 400px) {
+  .Carousel {
+    height: 25vh;
+  }
+}

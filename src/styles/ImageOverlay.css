@@ -9,7 +9,7 @@
   z-index: 4;
   justify-content: center;
   align-items: center;
-  padding: 10rem;
+  padding: var(--padding-xlarge);
 }
 .ImageOverlay--open {
   display: flex;
@@ -39,4 +39,12 @@
 .ImageOverlay__imageContainer img {
   height: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .ImageOverlay__imageContainer img {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
 }
